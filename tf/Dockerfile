@@ -14,7 +14,7 @@ RUN apk add --no-cache git curl openssh && \
     unzip terraform_${TERRAFORM_VERSION}_${TARGETOS}_${TARGETARCH}.zip -d /bin && \
     rm -f terraform_${TERRAFORM_VERSION}_${TARGETOS}_${TARGETARCH}.zip && \
     curl -o /bin/chamber https://github.com/segmentio/chamber/releases/download/${CHAMBER_VERSION}/chamber-${CHAMBER_VERSION}-${TARGETOS}-${TARGETARCH} && \
-    if [[ ${TARGETARCH} == "arm64" ]]; then TARGETARCH=arm; fi && \
+    if [[ ${TARGETARCH} == "arm64" ]]; then TARGETARCH=arm ; fi && \
     curl -o /bin/tfenv https://github.com/cloudposse/tfenv/releases/download/${TFENV_VERSION}/tfenv_${TARGETOS}_${TARGETARCH}
 
 
