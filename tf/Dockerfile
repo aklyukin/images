@@ -5,5 +5,7 @@ ARG TARGETOS
 ARG TARGETARCH
 
 RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM" > /log
+RUN echo "TARGETOS: $TARGETOS"
+RUN echo "TARGETARCH: TARGETARCH"
 FROM alpine
 COPY --from=build /log /log
